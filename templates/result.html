@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+</head>
+<body>
+    <h1>Analysis Result</h1>
+    <p><strong>Anomaly Count:</strong> {{ anomaly_count }}</p>
+    <p><strong>Normal Count:</strong> {{ normal_count }}</p>
+
+    <h3>Anomaly Distribution</h3>
+    <img src="{{ pie_path }}" width="400">
+
+    <h3>Anomaly Score Histogram</h3>
+    <img src="{{ score_path }}" width="500">
+
+    <br><br>
+    <a href="{{ url_for('download') }}">Download Predicted CSV</a>
+</body>
+</html>
